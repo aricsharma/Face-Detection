@@ -1,37 +1,47 @@
-This project presents a comparative analysis of four popular face detection models: Haar Cascade, DNN-Caffe, HoG, and DNN-YOLO. The aim is to evaluate their performance across various conditions including lighting, occlusion, face orientation, and image scale.
+# Face Detection Model Comparison
 
-Models Compared
+This project presents a comparative analysis of four widely used face detection models: Haar Cascade, DNN-Caffe, HoG, and DNN-YOLO. The goal is to evaluate their performance under various conditions such as lighting changes, occlusion, face orientation, and image scale.
 
-Haar Cascade: Fast and lightweight but struggles with occlusions and non-frontal faces.
+## Models Compared
 
-DNN-Caffe: High accuracy and robustness; suitable for varied real-world scenarios.
+- **Haar Cascade**  
+  Fast and lightweight, but limited by poor performance with occlusions and non-frontal faces.
 
-HoG (Dlib): Efficient on CPUs; less effective for small faces without upscaling.
+- **DNN-Caffe**  
+  High accuracy and robustness; performs well across diverse real-world scenarios.
 
-DNN-YOLO: Best speed and accuracy trade-off; great for high-resolution and real-time applications.
+- **HoG (Dlib)**  
+  CPU-efficient and suitable for medium to large faces; requires upscaling for smaller faces.
 
-Evaluation Criteria
+- **DNN-YOLO**  
+  Excellent speed and accuracy trade-off, ideal for high-resolution and real-time applications.
 
-Accuracy: Assessed using diverse datasets (Crowd, Expressions, Occlusions).
+## Evaluation Criteria
 
-Speed: Measured on CPU and GPU where applicable.
+- **Accuracy**  
+  Tested on datasets with variations in crowd density, facial expressions, and occlusions.
 
-Robustness: Tested under occlusions, lighting variation, and different face sizes.
+- **Speed**  
+  Measured on both CPU and GPU environments.
 
-Key Findings
+- **Robustness**  
+  Evaluated under varying lighting conditions, partial occlusions, and different face sizes.
 
-Best Overall: DNN-Caffe for general use with strong accuracy and acceptable speed.
+## Key Findings
 
-Best for Real-Time on GPU: DNN-YOLO with high throughput and precision.
+- **Best Overall**: DNN-Caffe for strong accuracy and acceptable performance across scenarios.
+- **Best for Real-Time (GPU)**: DNN-YOLO, offering high throughput with reliable precision.
+- **Best for Limited Resources**: Haar Cascade for simple and fast deployments.
+- **Best CPU-Only Option**: HoG for efficient detection of medium to large-sized faces.
 
-Best for Low Resources: Haar Cascade (limited scenarios).
+## Future Scope
 
-Best CPU-only Option: HoG for medium to large face sizes.
+- Optimize detection pipelines using parallel processing techniques.
+- Extend evaluation using larger and more diverse datasets.
+- Integrate adaptive learning for dynamic environments and streaming input.
 
-Future Scope
+## Tech Stack
 
-Optimize models for parallel processing
-
-Extend evaluation to larger datasets
-
-Explore adaptive learning for dynamic environments
+- **Languages**: Python
+- **Libraries**: OpenCV, Dlib, YOLO (Darknet / OpenCV DNN)
+- **Tools**: Jupyter Notebook, Matplotlib for visualization
